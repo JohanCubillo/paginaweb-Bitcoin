@@ -1,0 +1,49 @@
+.labels{
+  padding-top: 40px;
+  width: 80%;
+  height: 80%;
+}
+
+.columnas{
+  border-radius: 10px;
+  align-items: center;
+  text-align: center;
+  border-width: 3px;
+  border-style: solid;
+  border-image: 
+    linear-gradient(
+      to bottom, 
+      #f7931a, 
+      rgba(29, 28, 28, 0)
+    ) 1 100%;
+ }
+
+.tamañoimages{
+   
+    width: 200px;
+    height: 200px;
+}
+
+.alinia{
+ padding-top: 15px;
+}
+
+.colortabla{
+  color: white;
+  font-size: 5px;
+  
+}
+
+td{
+  font-size: 5px;
+  color: white;
+}
+
+table{
+  margin: 0 !important;
+  text-align: center !important;
+  width: 60% !important;
+  padding-right: 20% !important;
+  margin-top: 50px !important;
+  margin-left: 100px !important;
+}

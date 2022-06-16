@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+    <link rel="stylesheet" href="styledinamic.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="footer.css">
+
+
+
+   
+</head>
+
+<body>
+   
+    <div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+          <div class="nav-title">
+            <IMg class="icono" src="assets/img/Bitcoin.svg.png"></IMg>
+          </div>
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        
+        <div class="nav-links">
+          <a href="#Dominancia" target="_blank">Dominancia</a>
+          <a href="http://stackoverflow.com/users/4084003/" target="_blank">Altcoins</a>
+          <a href="https://in.linkedin.com/in/jonesvinothjoseph" target="_blank">LinkedIn</a>
+          <a href="https://codepen.io/jo_Geek/" target="_blank">Codepen</a>
+          <a href="https://jsfiddle.net/user/jo_Geek/" target="_blank">JsFiddle</a>
+        </div>
+      </div>
+      
+
+ 
+
+
+
+        <div class="container">
+            
+         
+         
+            <table class="table clasetabla">
+                <thead>
+                  <tr>
+                    <th scope="col" >Top</th>
+                    <th scope="col">Moneda</th>
+                    <th scope="col" >Dolares</th>
+                    <th scope="col" >Colones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="BTC_coin">
+                    <td >1</td>
+                    <td>Bitcoin</td>
+                    <td id="enDolares"class="enDolares"> $</td>
+                    
+                    <td id="enColones" class="enColones"></td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            
+             
+                
+</div>
+      <footer>
+        <div class="copyright">
+          <p>&copy 2013 - Organisation</p>
+        </div>
+        <div class="social">
+          <a href="#" class="support">Contact Us</a>
+          <a href="#" class="face">f</a>
+          <a href="#" class="tweet">t</a>
+          <a href="#" class="linked">in</a>
+        </div>
+      </footer>
+               
+
+
+</body>
+
+
+ 
+
+
+<script>	
+
+
+
+
+const getalts = async (coin , idDolares , idColones) => {
+
+try {
+
+    const url1= "https://min-api.cryptocompare.com/data/price?fsym=";
+    const datacoinurl = coin;
+    const url2= "&tsyms=USD,CRC";
+    const urlformate =url1+coin+url2;
+    const dir = fetch(urlformate)
+    .then(resultado => resultado.json())
+    .then(data=> mostrarData(data))
+
+    .catch(error=> console.log(error))
+
+    const mostrarData =(data)=>{
+
+        
+        document.getElementById(idDolares).innerHTML = "<p>$ "+data.USD+" </p>";
+        document.getElementById(idColones).innerHTML = "<p>$ "+data.CRC+" </p>";
+    }
+
+
+
+    
+}
+catch (error) {
+    console.log(error)
+
+   
+
+
+}
+};
+
+getalts("BTC","enDolares" ,"enColones")
+getalts("BTC","Dolares_usd")
+
+getalts("BTC","Dolares_usd")
+
+
+
+
+
+    // funcion para obtener datos de un API externo.
+
+    const getbitcoinAsync = async () => {
+
+        try {
+
+            const dir = await fetch('https://api.domination.finance/api/v0/price')
+
+            const post = await dir.json();
+
+            (async () => {
+                console.log(await post.data.bitcoin);
+            })();
+
+            //Igualo los valores a los valores del config de CHART.JS
+
+            return post.data.bitcoin;
+        }
+        catch (error) {
+            console.log(error)
+
+
+        }
+    };
+
+    // funcion de prueba para retornar El asyn como un valor
+    const printAddress = async () => {
+        const a = await getbitcoinAsync();
+        await console.log(a);
+    };
+
+
+    //funcion para cargar todo al cargar la index
+
+ 
+
+    window.addEventListener('load', getalts());
+
+
+   
+
+</script>
+
+<script>
+
+    //nuevo chart
+
+
+
+    //Datos de relleno del chart.js hacia el HTML
+    
+
+
+
+</script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+
+</html>
