@@ -8,17 +8,25 @@ canvas{
     height: 60%;
 }
 .icono{
-    width: 35px;
-    height: 35px;
+    width: 65px;
+    height: 65px;
     
 }
 
+.letras{
+  color: white;
+  font-size: 5px;
+  text-align: left;
+}
+.margin-left-table{
+  text-align: left;
+}
 .colorfuente{
   color: #fff;
 }
 
 .nav {
-    height: 38px;
+    height: 50px;
     width: 100%;
     background-color: #f7931a;
     position: relative;
